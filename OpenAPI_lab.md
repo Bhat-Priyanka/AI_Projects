@@ -11,7 +11,7 @@
 ### Installing OpenAPI Python package:
 ´´´bash 
     pip install openai
-´´´´bash
+´´´bash
 
 ### Creating a Geography assistant using OpenAPI:
 This example shows how we can use chat models with ideal model responses to create awesome conversational applications.
