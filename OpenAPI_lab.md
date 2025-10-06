@@ -14,10 +14,10 @@ pip install openai
 ```
 
 ### Creating a Geography assistant using OpenAPI:
-This example shows how we can use chat models with ideal model responses to create awesome conversational applications. \n
-Example Question: Give me a quick summary of India.\n
-Example Answer: India is a country in Asia that borders Nepal. The capital city is New Delhi. \n
-It uses System > User-Assistant > User prompt strategy to achieve best results.\n
+This example shows how we can use chat models with ideal model responses to create awesome conversational applications.  
+Example Question: Give me a quick summary of India.  
+Example Answer: India is a country in Asia that borders Nepal. The capital city is New Delhi.  
+It uses System > User-Assistant > User prompt strategy to achieve best results.
 
 ```
 from openai import OpenAI
