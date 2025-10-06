@@ -9,9 +9,9 @@
 * Store this key securely - do not share with anyone
 
 ### Installing OpenAPI Python package:
-´´´
+```
 pip install openai
-´´´
+```
 
 ### Creating a Geography assistant using OpenAPI:
 This example shows how we can use chat models with ideal model responses to create awesome conversational applications.
@@ -20,23 +20,23 @@ Example Answer: India is a country in Asia that borders Nepal. The capital city 
 It uses System > User-Assistant > User prompt strategy to achieve best results.
 
 # Add your key here.
-<br /> <code> 
-    from openai import OpenAI
-    client = OpenAI(api_key="<OPENAI_API_TOKEN>")
+```
+from openai import OpenAI
+client = OpenAI(api_key="<OPENAI_API_TOKEN>")
 
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        # Add a user and assistant message for in-context learning
-        messages=[
-            {"role": "system", "content": "You are a helpful Geography tutor that generates concise summaries for different countries."},
-            {"role": "user", "content": "Give me a quick summary of India."},
-            {"role": "assistant", "content": "India is a country in Asia that borders Nepal. The capital city is New Delhi."},
-            {"role": "user", "content": "Give me a quick summary of Greece."}
-        ]
-    )
+response = client.chat.completions.create(
+ model="gpt-4o-mini",
+# Add a user and assistant message for in-context learning
+messages=[
+    {"role": "system", "content": "You are a helpful Geography tutor that generates concise summaries for different countries."},
+    {"role": "user", "content": "Give me a quick summary of India."},
+    {"role": "assistant", "content": "India is a country in Asia that borders Nepal. The capital city is New Delhi."},
+    {"role": "user", "content": "Give me a quick summary of Greece."}
+    ]
+)
 
-    print(response.choices[0].message.content)
-</code>
+print(response.choices[0].message.content)
+```
 
 Example output:
 Greece is located in Southeast Europe, bordered by the Aegean Sea, the Ionian Sea, and the Mediterranean Sea. Its capital is Athens, known for its rich history and ancient landmarks like the Acropolis. Greece is famous for its islands, including Crete and Santorini, and is known for its contributions to philosophy, art, and democracy.
