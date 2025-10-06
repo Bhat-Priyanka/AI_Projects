@@ -10,7 +10,7 @@
 
 ### Installing OpenAPI Python package:
 <br /> <code> 
-pip install openai
+    pip install openai
 </code> 
 
 ### Creating a Geography assistant using OpenAPI:
@@ -19,26 +19,23 @@ Example Question: Give me a quick summary of India.
 Example Answer: India is a country in Asia that borders Nepal. The capital city is New Delhi.
 It uses System > User-Assistant > User prompt strategy to achieve best results.
 
-from openai import OpenAI
-
 # Add your key here.
 <br /> <code> 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    from openai import OpenAI
+    client = OpenAI(api_key="<OPENAI_API_TOKEN>")
 
-client = OpenAI(api_key="<OPENAI_API_TOKEN>")
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        # Add a user and assistant message for in-context learning
+        messages=[
+            {"role": "system", "content": "You are a helpful Geography tutor that generates concise summaries for different countries."},
+            {"role": "user", "content": "Give me a quick summary of India."},
+            {"role": "assistant", "content": "India is a country in Asia that borders Nepal. The capital city is New Delhi."},
+            {"role": "user", "content": "Give me a quick summary of Greece."}
+        ]
+    )
 
-response = client.chat.completions.create(
-    model="gpt-4o-mini",
-    # Add a user and assistant message for in-context learning
-    messages=[
-        {"role": "system", "content": "You are a helpful Geography tutor that generates concise summaries for different countries."},
-        {"role": "user", "content": "Give me a quick summary of India."},
-        {"role": "assistant", "content": "India is a country in Asia that borders Nepal. The capital city is New Delhi."},
-        {"role": "user", "content": "Give me a quick summary of Greece."}
-    ]
-)
-
-print(response.choices[0].message.content)
+    print(response.choices[0].message.content)
 </code>
 
 Example output:
