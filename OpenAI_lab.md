@@ -1,4 +1,8 @@
-# Working with OpenAPI and Python:
+# Working with OpenAI API and Python:
+
+## What is OpenAI API:
+OpenAI is a company that research and develop AI systems. Their groundbreaking development ChatGPT which is an AI powered chatbot gained worldwide attention.  
+OpenAI API allows access to OpenAI models using which customers can build their own applications.
 
 ## Prerequisites
 
@@ -8,12 +12,17 @@
 * Create a new secret key
 * Store this key securely - do not share with anyone
 
-### Installing OpenAPI Python package:
+### Installing OpenAI Python package:
 ```
 pip install openai
 ```
 
-### Creating a Geography assistant using OpenAPI:
+### Understanding different chat roles and system messages:
+* System - behaviour of the model. For example: "You are a Python tutor."
+* User - the one who instructs
+* Assistant - ideal response to the user instruction
+
+### Creating a Geography assistant using OpenAI:
 This example shows how we can use chat models with ideal model responses to create awesome conversational applications. 
 
 Example Question: Give me a quick summary of India.  
