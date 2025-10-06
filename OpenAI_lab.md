@@ -82,9 +82,9 @@ for q in user_msgs:
     print("Assistant: ", response.choices[0].message.content, "\n")
 ```
 #### Example output:
-User:  Explain what pi is.
+User:  Explain what pi is.  
 Assistant:  Pi (π) is a mathematical constant representing the ratio of a circle's circumference to its diameter. It is approximately equal to 3.14159. Pi is an irrational number, meaning it has an infinite number of non-repeating decimal places. It is widely used in geometry, trigonometry, and calculus. 
 
-User:  Summarize this in two bullet points.
+User:  Summarize this in two bullet points.  
 Assistant:  - Pi (π) is the ratio of a circle's circumference to its diameter, approximately equal to 3.14159.  
 - It is an irrational number with an infinite, non-repeating decimal expansion, commonly used in various areas of mathematics.
