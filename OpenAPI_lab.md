@@ -19,9 +19,9 @@ Example Question: Give me a quick summary of India.
 Example Answer: India is a country in Asia that borders Nepal. The capital city is New Delhi.
 It uses System > User-Assistant > User prompt strategy to achieve best results.
 
-# Add your key here.
 ```
 from openai import OpenAI
+# Add your key here.
 client = OpenAI(api_key="<OPENAI_API_TOKEN>")
 
 response = client.chat.completions.create(
@@ -38,8 +38,6 @@ messages=[
 print(response.choices[0].message.content)
 ```
 
-Example output:
+#### Example output:
 Greece is located in Southeast Europe, bordered by the Aegean Sea, the Ionian Sea, and the Mediterranean Sea. Its capital is Athens, known for its rich history and ancient landmarks like the Acropolis. Greece is famous for its islands, including Crete and Santorini, and is known for its contributions to philosophy, art, and democracy.
-)
 
-print(response.choices[0].message.content)
