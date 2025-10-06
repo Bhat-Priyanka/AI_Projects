@@ -53,4 +53,27 @@ print(response.choices[0].message.content)
 Greece is located in Southeast Europe, bordered by the Aegean Sea, the Ionian Sea, and the Mediterranean Sea. Its capital is Athens, known for its rich history and ancient landmarks like the Acropolis. Greece is famous for its islands, including Crete and Santorini, and is known for its contributions to philosophy, art, and democracy.
 
 ### Creating conversation histroy:
-Here you'll demonstrate how responses to user messages can be stored in a message history, which will enable full conversations is dempnstarted
+Here how responses to user messages can be stored in a message history, which will enable full conversations is demonstrated.
+
+```
+client = OpenAI(api_key="<OPENAI_API_TOKEN>")
+
+messages = [
+    {"role": "system", "content": "You are a helpful math tutor that speaks concisely."},
+    {"role": "user", "content": "Explain what pi is."}
+]
+
+# Send the chat messages to the model
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=messages,
+    max_completion_tokens=100
+)
+
+# Extract the assistant message from the response
+assistant_dict = {"role": "assistant", "content": messages}
+
+# Add assistant_dict to the messages dictionary
+messages.append(assistant_dict)
+print(messages)
+```
