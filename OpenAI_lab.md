@@ -52,3 +52,5 @@ print(response.choices[0].message.content)
 #### Example output:
 Greece is located in Southeast Europe, bordered by the Aegean Sea, the Ionian Sea, and the Mediterranean Sea. Its capital is Athens, known for its rich history and ancient landmarks like the Acropolis. Greece is famous for its islands, including Crete and Santorini, and is known for its contributions to philosophy, art, and democracy.
 
+### Creating conversation histroy:
+Here you'll demonstrate how responses to user messages can be stored in a message history, which will enable full conversations is dempnstarted
