@@ -1,8 +1,7 @@
 # AI Projects
 
 Welcome to my AI projects repository!  
-I'm a software developer with experience in **C++**, **C#**, **Angular**, and **WPF**.  
-I am an AWS Certified Solutions Architect and passionate about exploring and documenting my learnings in **AI technologies**.
+I'm a software developer with experience in **C++**, **C#**, **Angular**, and **WPF** and also an AWS Certified Solutions Architect. I am passionate about exploring and documenting my learnings in **AI technologies**.
 
 ## About
 
