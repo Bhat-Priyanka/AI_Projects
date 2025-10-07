@@ -32,6 +32,7 @@ It uses System > User-Assistant > User prompt strategy to achieve best results.
 
 ```
 from openai import OpenAI
+
 # Add your key here.
 client = OpenAI(api_key="<OPENAI_API_TOKEN>")
 
