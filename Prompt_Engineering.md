@@ -4,8 +4,7 @@ It is the best way to get desired response from LLM by giving specific and preci
 
 ## Key principles:
 * Use precise and detailed instructions.
-  *  Mention:
-    *  context, output length (limitation), format (example: f-strings) and style and audience  
+  *  Mention context, output length (limitation), format (example: f-strings) and style and audience  
 * Use the right action verbs. Example: Write, complete, explain etc.
   * Do not use verbs like think, feel, know, undrestand, try etc. which are ambiguous.
 * Use delimiters - parenthesis, braclets, backticks to specify input parts
@@ -31,7 +30,13 @@ prompt = f"""Complete the story delimited by triple backticks.
  ```{story}```"""
 
 # Get the generated response 
-response = get_response(prompt)
+response = client.chat.completions.create(
+ model="gpt-4o-mini",
+messages=[
+    {"role": "system", "content": "You are a helpful assitant for story telling."},
+    {"role": "user", "content": prompt}
+    ]
+)
 
 print("\n Original story: \n", story)
 print("\n Generated story: \n", response)
