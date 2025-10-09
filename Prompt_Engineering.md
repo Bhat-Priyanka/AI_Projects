@@ -20,7 +20,7 @@ It is the best way to get desired response from LLM by giving specific and preci
 * Variable/Parameter Highlighting: Used to emphasize specific values or parameters
 
 ```
-from OPENAI import OpenAI
+from openai import OpenAI
 client = OpenAI(api_key="<OPENAI_API_TOKEN>")
 
 story = "In a distant galaxy, there was a brave space explorer named Alex. Alex had spent years traveling through the cosmos, discovering new planets and meeting alien species. One fateful day, while exploring an uncharted asteroid belt, Alex stumbled upon a peculiar object that would change the course of their interstellar journey forever..."
@@ -41,3 +41,45 @@ messages=[
 print("\n Original story: \n", story)
 print("\n Generated story: \n", response)
 ```
+### Structured output:
+* Generate structured outputs such as table, list, structured paragraphs, custom format.
+* 
+#### Conditional prompts:
+* If-else style prompt
+  
+#### Example: Generate a table
+```
+from openai import OpenAI
+client = OpenAI(api_key="<OPENAI_API_TOKEN>")
+
+# Create a prompt that generates the table
+prompt = "Generate a table of 10 books with columns title, author, year for a science fiction lover."
+
+# Get the response
+response = client.chat.completions.create(
+ model="gpt-4o-mini",
+messages=[
+    {"role": "system", "content": "You are a helpful assitant for book recommendation."},
+    {"role": "user", "content": prompt}
+    ]
+)
+print(response)
+```
+
+##### Example output:
+Here’s a table of 10 science fiction books that any fan of the genre would appreciate:
+    
+    | Title                          | Author                | Year  |
+    |--------------------------------|----------------------|-------|
+    | Dune                           | Frank Herbert         | 1965  |
+    | Neuromancer                    | William Gibson        | 1984  |
+    | The Left Hand of Darkness      | Ursula K. Le Guin    | 1969  |
+    | Foundation                     | Isaac Asimov         | 1951  |
+    | Snow Crash                     | Neal Stephenson      | 1992  |
+    | The Dispossessed               | Ursula K. Le Guin    | 1974  |
+    | Hyperion                       | Dan Simmons          | 1989  |
+    | The Martian                   | Andy Weir            | 2011  |
+    | Ready Player One               | Ernest Cline         | 2011  |
+    | The Three-Body Problem         | Liu Cixin            | 2008  |
+    
+    These titles represent a mix of classic and contemporary works in the science fiction genre.
