@@ -83,3 +83,34 @@ Here’s a table of 10 science fiction books that any fan of the genre would app
     | The Three-Body Problem         | Liu Cixin            | 2008  |
     
     These titles represent a mix of classic and contemporary works in the science fiction genre.
+
+### Custom output:
+* To customize the output format, we provide instructions and desired output format.
+
+#### Example
+```
+from openai import OpenAI
+client = OpenAI(api_key="<OPENAI_API_TOKEN>")
+
+text = "A Serene Evening in Nature"
+
+# Create the instructions
+instructions = "You will be provided with a text delimited by triple backticks. Infer its language, then generate a suitable title for it. "
+
+# Create the output format
+output_format = """Use the following format for the output:
+         - Text: <the text>
+         - Language: <the text language>
+         - Title: <the generated title>"""
+
+# Create the final prompt
+prompt = instructions + output_format + f"```{text}```"
+
+# Call client.chat.completions.create here.
+response = get_response(prompt)
+print(response)
+```
+#### Example output:
+-text: A Serene Evening in Nature  
+-language: English  
+- title: The sun was setting behind the mountains, casting a warm golden glow across the landscape. Birds were chirping happily, and a gentle breeze rustled the leaves of the trees. It was a perfect evening for a leisurely stroll in the park
