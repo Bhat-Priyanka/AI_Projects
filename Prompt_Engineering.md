@@ -43,7 +43,7 @@ print("\n Generated story: \n", response)
 ```
 ### Structured output:
 * Generate structured outputs such as table, list, structured paragraphs, custom format.
-* 
+
 #### Conditional prompts:
 * If-else style prompt
   
