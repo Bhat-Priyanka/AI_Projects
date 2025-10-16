@@ -5,7 +5,7 @@
 - One - Few-shot prompting - for contextual tasks - example: sentiment analysis
 
 ### Example for One-shot:
-´´´
+```
 client = OpenAI(api_key="<OPENAI_API_TOKEN>")
 
 # Create a one-shot prompt
@@ -16,12 +16,12 @@ prompt = """
 
 response = get_response(prompt)
 print(response)
-´´´
+```
 #### Output:
 Odd numbers = {3, 5, 11}
 
 ### Sentiment analysis with few-shot prompting
-´´´
+```
 client = OpenAI(api_key="<OPENAI_API_TOKEN>")
 
 response = client.chat.completions.create(
@@ -36,6 +36,6 @@ response = client.chat.completions.create(
   temperature = 0
 )
 print(response.choices[0].message.content)
-´´´
+```
 #### Output: 
 1
