@@ -1,4 +1,4 @@
-# Best practices for writing prompts for businness application:
+# Best practices for writing prompts for business application:
 
 ## Examples: 
 # Craft a prompt to summarize the product description
