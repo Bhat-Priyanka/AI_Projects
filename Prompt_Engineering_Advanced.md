@@ -39,3 +39,39 @@ print(response.choices[0].message.content)
 ```
 #### Output: 
 1
+
+## Multi-step prompting:
+- Break down end goal into series of steps. Model goes through each step to give final output.
+- Used for Sequential tasks, Cognitive tasks. Example: Analyse code step by step
+  
+### Difference between few-shot and multi-step:
+- Few-shot : Questions and answers model learns from
+- Multi-step: Explicitly telling model what to do
+
+### Example for single-step:
+```
+client = OpenAI(api_key="<OPENAI_API_TOKEN>")
+
+# Create a single-step prompt to get help planning the vacation
+prompt = "Help me plan a mountain vacation."
+
+response = get_response(prompt)
+print(response)
+```
+
+### Example for multi-step:
+```
+client = OpenAI(api_key="<OPENAI_API_TOKEN>")
+
+# Create a prompt detailing steps to plan the trip
+prompt = """
+     Help me plan a mountain vacation.
+     Step 1 - Specify four potential locations for beach vacations
+     Step 2 - State some accommodation options in each
+     Step 3 - State activities that could be done in each
+     Step 4 - Evaluate the pros and cons for each destination
+    """
+
+response = get_response(prompt)
+print(response)
+```
