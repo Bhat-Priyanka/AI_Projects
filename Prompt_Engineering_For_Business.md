@@ -61,7 +61,6 @@ Best regards,
 The Marketing Team
 
 After transformation: 
- ```
 Subject: Discover Our Exciting New Product Line!
 
 Dear Valued Customer,
@@ -74,4 +73,43 @@ Thank you for being an important part of our community. We look forward to servi
 
 Warm regards,  
 The Marketing Team
+
+### 2. Craft a prompt to transform the text:
 ```
+prompt = f"""Proofread the given text without changing its structure, and then adjusts its tone to be formal and friendly step by step, delimited by three backticks ```{text}```
+"""
+```
+#### Output:
+output:
+    Before transformation:
+     
+    Hey guys, wanna know a cool trick? Here's how u can up your productivity game! First, download this awesome app, it's like the best thing ever! Then, just start using it and u'll see the difference. Its super easy and fun, trust me! So, what are u waiting for? Try it out now!
+    
+    After transformation:
+     Sure! Let's start by proofreading the text for any grammatical or spelling errors.
+    
+    **Proofread Text:**
+    Hey guys, want to know a cool trick? Here's how you can up your productivity game! First, download this awesome app; it's like the best thing ever! Then, just start using it, and you'll see the difference. It's super easy and fun, trust me! So, what are you waiting for? Try it out now!
+    
+    Now, let's adjust the tone to be formal and friendly step by step.
+    
+    Step 1: Address the audience more formally.
+    Hello everyone, would you like to learn a useful tip?
+    
+    Step 2: Use complete words and a more formal tone.
+    Here is how you can enhance your productivity.
+    
+    Step 3: Replace informal phrases with more formal alternatives.
+    First, please download this excellent application; it is truly remarkable.
+    
+    Step 4: Encourage action in a friendly manner.
+    Then, simply begin using it, and you will notice the difference.
+    
+    Step 5: Maintain a friendly tone while being formal.
+    It is very easy and enjoyable, I assure you!
+    
+    Step 6: Conclude with a friendly call to action.
+    So, what are you waiting for? I encourage you to try it out today!
+    
+    **Final Formal and Friendly Version:**
+    Hello everyone, would you like to learn a useful tip? Here is how you can enhance your productivity. First, please download this excellent application; it is truly remarkable. Then, simply begin using it, and you will notice the difference. It is very easy and enjoyable, I assure you! So, what are you waiting for? I encourage you to try it out today!
