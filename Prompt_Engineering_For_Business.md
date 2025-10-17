@@ -113,3 +113,25 @@ output:
     
     **Final Formal and Friendly Version:**
     Hello everyone, would you like to learn a useful tip? Here is how you can enhance your productivity. First, please download this excellent application; it is truly remarkable. Then, simply begin using it, and you will notice the difference. It is very easy and enjoyable, I assure you! So, what are you waiting for? I encourage you to try it out today!
+
+### 3. Craft a prompt to classify the ticket
+```
+prompt = f"""Classify the given ticket as technical issue, billing inquiry, or product feedback, without providing anything else in the response, delimited by three backticks ```{ticket}```"""
+```
+
+#### Output:
+   Ticket:  
+    Subject: Urgent - Login Error
+    
+    Hi Support Team,
+    
+    I'm having trouble accessing my account with the username "example_user." Every time I try to log in, I encounter an error message. I've already attempted to reset my password, but the issue persists. I need to resolve this problem urgently, as I have pending tasks that require immediate attention.
+    
+    Please investigate and assist promptly.
+    
+    Thanks,
+    John.
+    
+    Class:  ```
+    technical issue
+    ```
