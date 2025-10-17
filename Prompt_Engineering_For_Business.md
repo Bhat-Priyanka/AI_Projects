@@ -145,3 +145,16 @@ Extract entities from the ticket:
 {ticket_4} ->
 """
 ```
+
+### 5. Craft a prompt that asks the model for the function:
+```
+examples="""input = [10, 5, 8] -> output = 23
+input = [5, 2, 4] -> output = 11
+input = [2, 1, 3] -> output = 6
+input = [8, 4, 6] -> output = 18
+"""
+
+prompt = f"""
+Infer the Python function that maps the inputs to the outputs in the provided examples which are delimited by triple backticks ```{examples}```.
+"""
+```
