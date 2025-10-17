@@ -135,3 +135,13 @@ prompt = f"""Classify the given ticket as technical issue, billing inquiry, or p
     Class:  ```
     technical issue
     ```
+### 4. Craft a few-shot prompt to get the ticket's entities
+```
+prompt = f"""
+Extract entities from the ticket:
+{ticket_1} -> {entities_1}
+{ticket_2} -> {entities_2}
+{ticket_3} -> {entities_3}
+{ticket_4} ->
+"""
+```
