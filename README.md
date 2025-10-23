@@ -11,8 +11,9 @@ You'll find code samples and notes related to AI.
 ## Technologies
 
 - **OpenAI API:**
-- **Prompt Engineering:**
-- 
-Explore the files for individual projects and documentation.
+  - **Prompt Engineering:**
+- **Hugging Face:**
+  
+Explore the folders and files for individual projects and documentation.
 
 Feel free to connect!
