@@ -1,12 +1,18 @@
-# Start your code here!
+# AI-powered travel guide with Open AI:
+This a mini project to create a travel guide who records conversation history.
+Features:
+- Remembers history
+- System behaviour
+  
+```
 import os
 from openai import OpenAI
 
 # Define the model to use
 model = "gpt-4o-mini"
 
-# Define the client
-client = OpenAI()
+# Define the client, enter your key here
+client = OpenAI(mykey)
 
 conversation = [{"role": "system", "content": "You are a helpful tourist guide who speaks concisely about various locations and distances."}]
 user_msgs = ["How far away is the Louvre from the Eiffel Tower (in miles) if you are driving?", "Where is the Arc de Triomphe?", "What are the must-see artworks at the Louvre Museum?"]
@@ -29,6 +35,10 @@ for q in user_msgs:
     assistant_dict = {"role": "assistant", "content": response.choices[0].message.content}
     conversation.append(assistant_dict)
 
+    print("Assistant: ", response.choices[0].message.content, "\n")
+```
+
+## Output:
 Assistant:  The distance from the Louvre to the Eiffel Tower is approximately 3.5 miles (5.6 kilometers) when driving. 
 
 Assistant:  The Arc de Triomphe is located at the western end of the Champs-Élysées in Paris, France. It stands at the Place Charles de Gaulle and honors those who fought and died for France in the French Revolutionary and Napoleonic Wars. 
@@ -39,5 +49,3 @@ Assistant:  At the Louvre Museum, must-see artworks include:
 2. **Venus de Milo** - A renowned ancient Greek statue representing the goddess Aphrodite.
 3. **Winged Victory of Samothrace** - A stunning Hellenistic sculpture of the goddess Nike.
 4. **The Coronation of Napoleon** by Jacques-Louis David - A grand neoclassical painting depicting Napoleon's coronation.
-5. 
-    print("Assistant: ", response.choices[0].message.content, "\n")
