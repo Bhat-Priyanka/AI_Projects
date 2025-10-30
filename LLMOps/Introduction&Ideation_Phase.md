@@ -5,7 +5,7 @@
 ## LLM: What is it?
 - Pre-trained on large set of text data
 - Can understand and generate hum-like texts
-- 
+  
 ## LLMOps vs MLOps:
 - LLMOps:
   - Model size is large
