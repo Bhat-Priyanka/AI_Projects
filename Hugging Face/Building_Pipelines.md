@@ -63,7 +63,7 @@ Two types:
 ### Example for abstractive summarization pipeline using cnicu/t5-small-booksum model:
 ```
 # Create the summarization pipeline
-summarizer = pipeline(task="summarization", model="cnicu/t5-small-booksum")
+summarizer = pipeline(task="summarization", model="cnicu/t5-small-booksum", min_new_tokens=1, max_new_tokens=10)
 
 # Summarize the text
 summary_text = summarizer(original_text)
@@ -72,4 +72,79 @@ summary_text = summarizer(original_text)
 print(f"Original text length: {len(original_text)}")
 print(f"Summary: {summary_text}")
 print(f"Summary length: {len(summary_text[0]['summary_text'])}")
+```
+
+### Auto Classes:
+- Flexible access to models and tokenizers, provides more control
+- Ideal for advanced tasks
+- Pipelines - quick, auto classes - flexible
+
+### AutoModels:
+- Choose autoModel class to directly download model
+
+### AutoTokenizers:
+- Prepare text input data, use tokenizer paired with model for best results
+
+### Example: tokenizing text with AutoTokenizer:
+```
+# Import necessary library for tokenization
+from transformers import AutoTokenizer
+
+# Load the tokenizer
+tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english")
+
+# Split input text into tokens
+tokens = tokenizer.tokenize("AI: Making robots smarter and humans lazier!")
+
+# Display the tokenized output
+print(f"Tokenized output: {tokens}")
+```
+#### Output:
+    Tokenized output: ['ai', ':', 'making', 'robots', 'smarter', 'and', 'humans', 'la', '##zier', '!']
+
+### AutoClasses example:
+```
+from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline
+
+# Download the model and tokenizer
+my_model = AutoModelForSequenceClassification.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english")
+my_tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased-finetuned-sst-2-english")
+
+# Create the pipeline
+my_pipeline = pipeline(task="sentiment-analysis", model=my_model, tokenizer=my_tokenizer)
+
+# Predict the sentiment
+output = my_pipeline("This course is pretty good, I guess.")
+print(f"Sentiment using AutoClasses: {output[0]['label']}")
+```
+#### Output:
+Sentiment using AutoClasses: POSITIVE
+
+### Extracting text with PyPDF:
+```
+from pypdf import PdfReader
+
+# Extract text from the PDF
+reader = PdfReader("example.pdf")
+
+# Extract text from all pages
+document_text = ""
+for page in reader.pages: 
+    document_text += page.extract_text()
+
+print(document_text)
+```
+
+### Q&A pipeline:
+```
+# Load the question-answering pipeline
+qa_pipeline = pipeline(task="question-answering", model="distilbert-base-cased-distilled-squad")
+
+question = "What is the notice period for resignation?"
+
+# Get the answer from the QA pipeline
+result = qa_pipeline(question=question, context=document_text)
+
+# Print the answer
+print(f"Answer: {result['answer']}")
 ```
