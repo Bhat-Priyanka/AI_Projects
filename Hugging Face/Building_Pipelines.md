@@ -54,3 +54,22 @@ print(f"Top Label: {output['labels'][0]} with score: {output['scores'][0]}")
 ```
 #### Output:
 Top Label: science with score: 0.9510332942008972
+
+### Summarizing long texts:
+Two types:
+1. Extractive: selects key sentences from original text
+2. Abstractive: generates new sentences summarizing main ideas
+
+### Example for abstractive summarization pipeline using cnicu/t5-small-booksum model:
+```
+# Create the summarization pipeline
+summarizer = pipeline(task="summarization", model="cnicu/t5-small-booksum")
+
+# Summarize the text
+summary_text = summarizer(original_text)
+
+# Compare the length
+print(f"Original text length: {len(original_text)}")
+print(f"Summary: {summary_text}")
+print(f"Summary length: {len(summary_text[0]['summary_text'])}")
+```
