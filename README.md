@@ -14,7 +14,7 @@ You'll find code samples and notes related to AI.
   - **Prompt Engineering:**
 - **Hugging Face:**
   - **Building Pipelines:**
-- **LLmOps:**
+- **LLMOps:**
   
 Explore the folders and files for individual projects and documentation.
 
