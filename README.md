@@ -13,6 +13,8 @@ You'll find code samples and notes related to AI.
 - **OpenAI API:**
   - **Prompt Engineering:**
 - **Hugging Face:**
+  - **Building Pipelines:**
+- **LLmOps:**
   
 Explore the folders and files for individual projects and documentation.
 
