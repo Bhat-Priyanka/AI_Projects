@@ -177,3 +177,35 @@ function_definition = [{"type": "function",
 response = get_response(function_definition)
 print(response)
 ```
+
+### Moderations API:
+- To make sure that users don't post inappropriate content to your API - use the moderation API to check users' prompts before generating the response.
+```
+client = OpenAI(api_key="<OPENAI_API_TOKEN>")
+
+message = "Can you show some example sentences in the past tense in French?"
+
+# Use the moderation API
+moderation_response = client.moderations.create(input=message) 
+
+# Print the response
+print(moderation_response.results[0].categories)
+```
+
+### Adding guardrails:
+```
+client = OpenAI(api_key="<OPENAI_API_TOKEN>")
+
+user_request = "Can you recommend a good restaurant in Berlin?"
+
+# Write the system and user message
+messages = [{"role": "system", "content": "Your role is to assess whether the user question is allowed or not, and if it is, to be a helpful assistant to tourists visiting Rome. The allowed topics are food and drink, attractions, history and things to do around the city of Rome. If the topic is allowed, reply with an answer as normal, otherwise say 'Apologies, but I am not allowed to discuss this topic.'",},
+            {"role": "user", "content": user_request}]
+
+response = client.chat.completions.create(
+    model="gpt-4o-mini", messages=messages
+)
+
+# Print the response
+print(response.choices[0].message.content)
+```
