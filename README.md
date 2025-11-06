@@ -15,6 +15,10 @@ You'll find code samples and notes related to AI.
 - **Hugging Face:**
   - **Building Pipelines:**
 - **LLMOps:**
+- **AI Systems with OpenAI**
+- **Projects**
+  - **Travel agent chatbot with OpenAI**
+  - **Organizing large medical datasets with OpenAI**
   
 Explore the folders and files for individual projects and documentation.
 
