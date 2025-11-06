@@ -10,15 +10,16 @@ You'll find code samples and notes related to AI.
 
 ## Technologies
 
-- **OpenAI API:**
+- [**OpenAI API:**]((https://github.com/Bhat-Priyanka/AI_Projects/tree/main/OpenAI))
   - **Prompt Engineering:**
+  - **Embeddings:**
 - **Hugging Face:**
   - **Building Pipelines:**
 - **LLMOps:**
 - **AI Systems with OpenAI**
-- **Projects**
-  - **Travel agent chatbot with OpenAI**
-  - **Organizing large medical datasets with OpenAI**
+- **Projects:**
+  - **Travel agent chatbot with OpenAI:**
+  - **Organizing large medical datasets with OpenAI:**
   
 Explore the folders and files for individual projects and documentation.
 
