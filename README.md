@@ -10,7 +10,7 @@ You'll find code samples and notes related to AI.
 
 ## Technologies
 
-- [**OpenAI API:**]((https://github.com/Bhat-Priyanka/AI_Projects/tree/main/OpenAI))
+- [**OpenAI API:**](https://github.com/Bhat-Priyanka/AI_Projects/tree/main/OpenAI)
   - **Prompt Engineering:**
   - **Embeddings:**
 - **Hugging Face:**
