@@ -12,7 +12,8 @@ You'll find code samples and notes related to AI.
 
 - [**OpenAI API:**](https://github.com/Bhat-Priyanka/AI_Projects/tree/main/OpenAI)
   - [**Prompt Engineering:**](https://github.com/Bhat-Priyanka/AI_Projects/tree/main/OpenAI/Prompt%20Engineering)
-  - [**Embeddings:**]()
+  - [**Embeddings:**](https://github.com/Bhat-Priyanka/AI_Projects/tree/main/OpenAI/Embeddings)
+    - [**Vector Databases:**](https://github.com/Bhat-Priyanka/AI_Projects/blob/main/OpenAI/Embeddings/3_Vector_databases_for_embedding.md)
 - [**Hugging Face:**](https://github.com/Bhat-Priyanka/AI_Projects/tree/main/Hugging%20Face)
 - [**LLMOps:**](https://github.com/Bhat-Priyanka/AI_Projects/tree/main/LLMOps)
 - [**AI Systems with OpenAI**](https://github.com/Bhat-Priyanka/AI_Projects/tree/main/AI%20Systems%20With%20OpenAI)
