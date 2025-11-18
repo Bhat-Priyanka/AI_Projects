@@ -28,6 +28,7 @@ Robust breed and image lookup
 Uses public GitHub API for breed images
 Clear, actionable recommendations with explanations
 
+### Code:
 ```
 import pandas as pd
 dog_breeds = pd.read_csv('data/breed_traits.csv')
@@ -534,3 +535,11 @@ if __name__ == "__main__":
 ```
 
 ### Output:
+<img src="https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/Output%20Images/AI1.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/Output%20Images/AI2.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/Output%20Images/AI3.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/Output%20Images/AI4.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/Output%20Images/AI5.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/Output%20Images/AI6.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/Output%20Images/AI7.png" width="800">
+<img src="https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/Output%20Images/AI8.png" width="800">
