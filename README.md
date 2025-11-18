@@ -18,7 +18,9 @@ You'll find code samples and notes related to AI.
 - [**LLMOps:**](https://github.com/Bhat-Priyanka/AI_Projects/tree/main/LLMOps)
 - [**AI Systems with OpenAI**](https://github.com/Bhat-Priyanka/AI_Projects/tree/main/AI%20Systems%20With%20OpenAI)
 - [**Projects:**](https://github.com/Bhat-Priyanka/AI_Projects/tree/main/Projects)
+  - [**AI Dog Matchmaker:**](https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/AI%20Dog%20Matchmaker.md)
   - [**Travel agent chatbot with OpenAI:**](https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/Chatbot_travel_guide.md)
+  - [**Clothing Review Analysis with Embeddings:**](https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/Clothing%20Review%20Analysis%20with%20Embeddings.md)
   - [**Organizing large medical datasets with OpenAI:**](https://github.com/Bhat-Priyanka/AI_Projects/blob/main/Projects/Organizing_Medical_Data_with_OpenAI.md)
   
 Explore the folders and files for individual projects and documentation.
